@@ -10,4 +10,4 @@ TeSP PSI D
 
 ## Repositório github
 
-O projeto está disponivel no [GitH](www.github.com/linhk9/Projeto-PWC)[ub]().
+O projeto está disponivel no [GitHub](https://github.com/linhk9/Projeto-PWC).

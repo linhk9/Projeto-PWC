@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rafeiros Felizes</title>
 
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -117,7 +119,7 @@
 </svg>
 
 <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Rafeiros Felizes</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="index.html">Rafeiros Felizes</a>
 
   <ul class="navbar-nav flex-row d-md-none">
     <li class="nav-item text-nowrap">
@@ -161,15 +163,33 @@
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="loja.html">
-                <i class="bi bi-cart3"></i>
+                <svg class="bi"><use xlink:href="#cart"/></svg>
                 Loja
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="adotar.html">
+                <i class="bi bi-balloon-heart"></i>
+                Adotar
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2" href="contactos.html">
+                <i class="bi bi-telephone"></i>
+              Contactos
+            </a>
+        </li>
           </ul>
 
           <hr class="my-3">
 
           <ul class="nav flex-column mb-auto">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="favoritos.html">
+                  <i class="bi bi-heart"></i>
+                Favoritos
+              </a>
+          </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
@@ -180,10 +200,14 @@
         </div>
       </div>
     </div>
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 imgtop">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div style="display: flex; justify-content: center; align-items: center;">
           <h1 class="display-2"><b>Rafeiros Felizes</b></h1>
         </div>
+        <div class="d-flex justify-content-center">
+          <img src="./img/banner.jpg" alt="dog" style="width: 70%; height: 70%;">
+        </div>
+        <p></p>
         <h2>Bem-vindo ao Rafeiros Felizes - Onde as Caudas Encontram Alegria!</h2>
         <p>Na Rafeiros Felizes, acreditamos no poder transformador da ligação entre humanos e animais. 
           A nossa missão é trazer alegria a ambos os lados da trela, unindo famílias amorosas aos companheiros caninos perfeitos. 
@@ -194,8 +218,7 @@
     </main>
   </div>
 </div>
-<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
-    <script src="./assets/js/dashboard.js"></script></body>
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
+  <script src="./assets/js/dashboard.js"></script></body>
 </html>

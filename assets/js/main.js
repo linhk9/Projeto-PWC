@@ -7,9 +7,6 @@ $.ajax({
   url: authUrl,
   method: 'POST',
   data: `grant_type=client_credentials&client_id=${apiKey}&client_secret=${secret}`,
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
-  },
   success: function(data) {
     const accessToken = data.access_token;
     $.ajax({
@@ -38,7 +35,7 @@ $.ajax({
         
           const detailsCell = document.createElement('td');
           const detailsButton = document.createElement('button');
-          detailsButton.textContent = 'Details';
+          detailsButton.textContent = 'Detalhes';
           detailsButton.className = 'btn btn-primary';
           detailsButton.onclick = function() {
             console.log('Details button clicked for item:', item);

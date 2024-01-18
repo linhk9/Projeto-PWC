@@ -150,7 +150,7 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="index.html">
+              <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="index.html">
                 <svg class="bi"><use xlink:href="#house-fill"/></svg>
                 Homepage
               </a>
@@ -162,8 +162,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="caes.html">
-                <i class="bi bi-clipboard-heart"></i>
+              <a class="nav-link d-flex align-items-center gap-2 active" href="caes.html">
+                <i class="bi bi-balloon-heart"></i>
                 Cães para adoção
               </a>
             </li>
@@ -175,7 +175,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="adotar.html">
-                <i class="bi bi-balloon-heart"></i>
+                <i class="bi bi-clipboard-heart"></i>
                 Adotar
               </a>
           </li>
@@ -207,25 +207,11 @@
       </div>
     </div>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <h1>Cães para adotar</h1>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Idade</th>
-                                <th>Genero</th>
-                                <th>Foto</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="dataGridBody"></tbody>
-                    </table>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" id="dataGridBody"></div>
         </div>
+      </div>
     </main>
   </div>
 </div>

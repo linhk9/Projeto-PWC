@@ -207,24 +207,32 @@
       </div>
     </div>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <h1 class="display-2"><b>Rafeiros Felizes</b></h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1>Cães para adotar</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Idade</th>
+                                <th>Genero</th>
+                                <th>Foto</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataGridBody"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="d-flex justify-content-center">
-          <img src="./img/banner.jpg" alt="dog" style="width: 70%; height: 70%;">
-        </div>
-        <p></p>
-        <h2>Bem-vindo ao Rafeiros Felizes - Onde as Caudas Encontram Alegria!</h2>
-        <p>Na Rafeiros Felizes, acreditamos no poder transformador da ligação entre humanos e animais. 
-          A nossa missão é trazer alegria a ambos os lados da trela, unindo famílias amorosas aos companheiros caninos perfeitos. 
-          Somos mais do que uma plataforma de adoção de cães - somos casamenteiros, unindo corações e patas na busca da felicidade.
-        </p>
-
-
     </main>
   </div>
 </div>
   <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
-  <script src="./assets/js/dashboard.js"></script></body>
+  <script src="./assets/js/dashboard.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
 </html>

@@ -210,31 +210,30 @@
         <div style="display: flex; justify-content: center; align-items: center;">
             <h1 class="display-5"><b>Formulário para adopção</b></h1>
           </div>
-        <form>
-            <div class="mb-3">
-              <label for="fullname" class="form-label">Nome Completo</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label">Contacto telefónico</label>
-              <input type="number" class="form-control" id="phone" required>
-            </div>
-            <div class="mb-3">
+        <div class="mb-3">
+            <label for="nomeCompleto" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="nomeCompleto" required>
+        </div>
+        <div class="mb-3">
+            <label for="telefone" class="form-label">Contacto telefónico</label>
+            <input type="number" class="form-control" id="telefone" required>
+        </div>
+        <div class="mb-3">
                 <label for="horario" class="form-label">Horário preferencial de contacto</label>
                 <input type="text" class="form-control" id="horario" required>
-            </div>
-            <div class="mb-3">
+        </div>
+        <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
                 <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="age" class="form-label">Idade</label>
-                <input type="number" class="form-control" id="age" required>
-            </div>
-            <div class="mb-3">
-                <label for="address" class="form-label">Morada</label>
-                <input type="text" class="form-control" id="address" required>
-            </div>
+        </div>
+        <div class="mb-3">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="idade" required>
+        </div>
+        <div class="mb-3">
+                <label for="morada" class="form-label">Morada</label>
+                <input type="text" class="form-control" id="morada" required>
+        </div>
             <div class="mb-3">
                 <label for="city" class="form-label">Cidade</label>
                 <input type="text" class="form-control" id="city" required>
@@ -249,28 +248,29 @@
             </div>
 
             <div class="mb-3">
-                <label for="sexo" class="form-label">Caso não procure adoptar um animal específico, indique se tem preferência pelo sexo do animal.</label>
+                <div class="mb-3">
+                <label for="objetivo" class="form-label">Qual o objetivo da adopção?</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="femea" id="femea">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Fêmea
+                    <input class="form-check-input" type="checkbox" value="" id="gato">
+                    <label class="form-check-label" for="gato">
+                        Companhia para outro gato
                     </label>
                 </div>
-
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Macho" id="Macho" >
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Macho
+                    <input class="form-check-input" type="checkbox" value="" id="companhia">
+                    <label class="form-check-label" for="companhia">
+                        Companhia
                     </label>
                 </div>
-
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Indiferente" id="Indiferente">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Indiferente
+                    <input class="form-check-input" type="checkbox" value="" id="criacao">
+                    <label class="form-check-label" for="criacao">
+                        Criação
                     </label>
                 </div>
             </div>
+                
+            <div class="mb-3">
 
             <div class="mb-3">
                 <label for="objetivo" class="form-label">Qual o objetivo da adopção?</label>

@@ -225,7 +225,7 @@ function createDetails(data) {
   adoptButton.className = 'btn btn-sm btn-outline-secondary';
   adoptButton.addEventListener('click', function() {
     let caesAdotados = JSON.parse(localStorage.getItem('caesAdotados')) || [];
-    caesAdotados.push(data.animal);
+    caesAdotados.push(data.animal.name);
     localStorage.setItem('caesAdotados', JSON.stringify(caesAdotados));
   });
   

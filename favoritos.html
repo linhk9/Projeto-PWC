@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Favoritos</title>
+    <title>Rafeiros Felizes | Favoritos</title>
 
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 
@@ -150,7 +150,7 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="index.html">
+              <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="index.html">
                 <svg class="bi"><use xlink:href="#house-fill"/></svg>
                 Homepage
               </a>
@@ -162,7 +162,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="caes.html">
                 <i class="bi bi-clipboard-heart"></i>
                 Cães para adoção
               </a>
@@ -191,31 +191,29 @@
 
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="favoritos.html">
-                    <i class="bi bi-heart"></i>
-                  Favoritos
-                </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
-                Definições
+              <a class="nav-link d-flex align-items-center gap-2 active" href="favoritos.html">
+                  <i class="bi bi-heart"></i>
+                Favoritos
               </a>
-            </li>
+          </li>
           </ul>
         </div>
       </div>
     </div>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card" id="dataGridBodyFavoritos"></div>
+      <div class="album py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="dataGridFavoritos">
+
+            </div>
+          </div>
         </div>
-      </div>
     </main>
   </div>
 </div>
   <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
   <script src="./assets/js/dashboard.js"></script></body>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/main.js"></script>
 </html>

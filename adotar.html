@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adotar um Rafeiro</title>
+    <title>Rafeiros Felizes | Adotar</title>
 
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 
@@ -140,77 +140,72 @@
 </header>
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
-      <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="sidebarMenuLabel">Rafeiros Felizes</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="index.html">
-                <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                Homepage
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="sobre.html">
-                <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-                Sobre nós
-              </a>
+    <div class="row">
+      <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+        <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">Rafeiros Felizes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+            <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="index.html">
+                  <svg class="bi"><use xlink:href="#house-fill"/></svg>
+                  Homepage
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2" href="sobre.html">
+                  <svg class="bi"><use xlink:href="#file-earmark"/></svg>
+                  Sobre nós
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2" href="caes.html">
                   <i class="bi bi-clipboard-heart"></i>
                   Cães para adoção
                 </a>
               </li>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="loja.html">
-                <svg class="bi"><use xlink:href="#cart"/></svg>
-                Loja
-              </a>
-            </li>
-            <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2" href="loja.html">
+                  <svg class="bi"><use xlink:href="#cart"/></svg>
+                  Loja
+                </a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2 active" href="adotar.html">
                   <i class="bi bi-balloon-heart"></i>
                   Adotar
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="contactos.html">
-                    <i class="bi bi-telephone"></i>
-                  Contactos
-                </a>
-            </li>
-          </ul>
-
-          <hr class="my-3">
-
-          <ul class="nav flex-column mb-auto">
-            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="contactos.html">
+                  <i class="bi bi-telephone"></i>
+                Contactos
+              </a>
+          </li>
+            </ul>
+  
+            <hr class="my-3">
+  
+            <ul class="nav flex-column mb-auto">
+              <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2" href="favoritos.html">
                     <i class="bi bi-heart"></i>
                   Favoritos
                 </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
-                Definições
-              </a>
-            </li>
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <h1 class="display-5"><b>Formulário para adopção</b></h1>
-          </div>
-        <div class="mb-3">
+        <form class="row g-3" method="POST">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <h1 class="display-5"><b>Formulário para adopção</b></h1>
+              </div>
+              <div class="mb-3">
             <label for="nomeCompleto" class="form-label">Nome Completo</label>
             <input type="text" class="form-control" id="nomeCompleto" required>
         </div>
@@ -440,7 +435,7 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="habitação" class="form-label">Não se importe com estranhos:</label>
+                <label for="estranhos" class="form-label">Não se importe com estranhos:</label>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="Apartamento" id="Apartamento">
                     <label class="form-check-label" for="flexRadioDefault1">
@@ -448,7 +443,7 @@
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Casa" id="Casa" >
+                    <input class="form-check-input" type="radio" name="Casa" id="1" >
                     <label class="form-check-label" for="flexRadioDefault2">
                         Importante
                     </label>
@@ -746,15 +741,13 @@
                 <label for="fullname" class="form-label">Outra informação que queira partilhar connosco</label>
                 <input type="text" class="form-control" id="name">
             </div>
-
-            <form class="row g-3">
                 <div class="col-auto">
                   <label>Anexar documentos:</label>
                 </div>
                 <div class="col-auto">
                   <button type="button" class="btn btn-primary mb-3">Adicionar ficheiros</button>
                 </div>
-              </form>
+              
 
             <p>Vamos manter os seus dados em segurança, enquanto assim o pretender, pode eliminar ou editar. Consulte a nossa Política de Privacidade.</p>
             <div class="mb-3 form-check">

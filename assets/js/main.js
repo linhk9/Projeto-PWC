@@ -4,6 +4,7 @@ const authUrl = 'https://api.petfinder.com/v2/oauth2/token';
 const caesUrl = 'https://api.petfinder.com/v2/animals?type=dog';
 const caesDetalhesUrl = 'https://api.petfinder.com/v2/animals';
 
+//Metodo para verificar se a pagina atual é a correta
 function paginaCorreta(pageName) {
   const url = window.location.href.split('?')[0];
   const parts = url.split('/');
@@ -11,6 +12,7 @@ function paginaCorreta(pageName) {
   return currentPage.startsWith(pageName); 
 }
 
+//Metodo de autenticação da API para obter o token de acesso
 $.ajax({
   url: authUrl,
   method: 'POST',
@@ -18,7 +20,9 @@ $.ajax({
   success: function(data) {
     const accessToken = data.access_token;
 
+    //Verifica se a pagina atual é a de listagem de caes
     if (paginaCorreta('caes')) {
+      //busca os caes
       $.ajax({
         url: caesUrl,
         headers: {
@@ -31,17 +35,22 @@ $.ajax({
           console.error('Erro:', error);
         }
       });
-    } else if (paginaCorreta('favoritos')) {
+    } 
+    //Verifica se a pagina atual é a de favoritos
+    else if (paginaCorreta('favoritos')) {
         const favoritos = JSON.parse(localStorage.getItem('favoritosAtivos'));
 
         CardsFavoritos(favoritos);
         
 
-    } else if (paginaCorreta('detalhes')) {
+    } 
+    //Verifica se a pagina atual é a de detalhes
+    else if (paginaCorreta('detalhes')) {
       const urlParams = new URLSearchParams(window.location.search);
       const id = urlParams.get('id');
       console.log(id);
     
+      //busca os detalhes do cao pelo id
       $.ajax({
         url: caesDetalhesUrl +  '/' + id,
         headers: {
@@ -61,10 +70,12 @@ $.ajax({
   }
 });
 
+//Metodo para criar os cards de caes
 function createCards(data) {
   const container = document.getElementById('dataGridBody');
 
   data.animals.forEach(item => {
+    //cria o card
     const col = document.createElement('div');
     col.className = 'col';
 
@@ -91,12 +102,14 @@ function createCards(data) {
     const btnGroup = document.createElement('div');
     btnGroup.className = 'btn-group';
 
+    //butao para mais detalhes
     const detailsButton = document.createElement('a');
     detailsButton.textContent = 'Mais Detalhes';
     detailsButton.className = 'btn btn-sm btn-outline-secondary';
     detailsButton.href = './detalhes.html?id=' + item.id;
     btnGroup.appendChild(detailsButton);
 
+    //butao para adicionar aos favoritos
     const favoritesButton = document.createElement('a');
     favoritesButton.textContent = 'Adicionar aos Favoritos';
     favoritesButton.className = 'btn btn-sm btn-outline-secondary';
@@ -109,6 +122,7 @@ function createCards(data) {
     });
     btnGroup.appendChild(favoritesButton);
 
+    
     const cardFooter = document.createElement('div');
     cardFooter.className = 'd-flex justify-content-between align-items-center';
     cardFooter.appendChild(btnGroup);
@@ -121,15 +135,17 @@ function createCards(data) {
   });
 }
 
+//Metodo para criar os cards de favoritos
 function CardsFavoritos(data) {
   const container = document.getElementById('dataGridFavoritos');
 
+  //verifica se existem favoritos
   if (data.length === 0) {
     container.textContent = 'Sem favoritos adicionados';
     return;
   }
 
-  console.log(data);
+  //cria os cards
   data.forEach(item => {
     const col = document.createElement('div');
     col.className = 'col';
@@ -157,12 +173,15 @@ function CardsFavoritos(data) {
     const btnGroup = document.createElement('div');
     btnGroup.className = 'btn-group';
 
+    //butao para mais detalhes
     const detailsButton = document.createElement('a');
     detailsButton.textContent = 'Mais Detalhes';
     detailsButton.className = 'btn btn-sm btn-outline-secondary';
     detailsButton.href = './detalhes.html?id=' + item.id;
     btnGroup.appendChild(detailsButton);
 
+
+    //butao para remover dos favoritos
     const favoritesButton = document.createElement('a');
     favoritesButton.textContent = 'Remover dos Favoritos';
     favoritesButton.className = 'btn btn-sm btn-outline-secondary';
@@ -190,6 +209,7 @@ function CardsFavoritos(data) {
   });
 }
 
+//Metodo para criar os detalhes do cao
 function createDetails(data) {
   const container = document.getElementById('adotarMain');
 
@@ -220,6 +240,7 @@ function createDetails(data) {
   
   table.appendChild(row);
   
+  //butao para adotar
   const adoptButton = document.createElement('button');
   adoptButton.textContent = 'Adotar';
   adoptButton.className = 'btn btn-sm btn-outline-secondary';
